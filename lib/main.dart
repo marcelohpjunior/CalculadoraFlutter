@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.teal,
@@ -25,7 +26,7 @@ class Calculadora extends StatefulWidget {
 
 class _CalculadoraState extends State<Calculadora> {
   IconData _operador;
-  TextEditingController _val1 = TextEditingController();
+  final TextEditingController  _val1 = TextEditingController();
   TextEditingController _val2 = TextEditingController();
   num _resultado = 0;
   CalculadoraModel calculadora = CalculadoraModel();
@@ -97,9 +98,6 @@ class _CalculadoraState extends State<Calculadora> {
                       ),
                       child: TextField(
                         controller: _val1,
-                        onChanged: (v) {
-                          _val1.text = v;
-                        },
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 20),
@@ -123,11 +121,8 @@ class _CalculadoraState extends State<Calculadora> {
                       padding: const EdgeInsets.symmetric(
                         horizontal: 20,
                       ),
-                      child: TextField(
+                      child: TextFormField(
                         controller: _val2,
-                        onChanged: (v) {
-                          _val2.text = v;
-                        },
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 20),
