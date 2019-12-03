@@ -100,11 +100,12 @@ class _CalculadoraState extends State<Calculadora> {
                         controller: _val1,
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                         decoration: InputDecoration(
                           hintText: "Valor 1",
                           hintStyle: TextStyle(
-                            fontSize: 20,
+                            fontSize: 25,
+                            fontWeight: FontWeight.normal
                           ),
                         ),
                       ),
@@ -125,11 +126,12 @@ class _CalculadoraState extends State<Calculadora> {
                         controller: _val2,
                         keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                         decoration: InputDecoration(
                           hintText: "Valor 2",
                           hintStyle: TextStyle(
-                            fontSize: 20,
+                            fontSize: 25,
+                            fontWeight: FontWeight.normal
                           ),
                         ),
                       ),
